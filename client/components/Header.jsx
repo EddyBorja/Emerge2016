@@ -5,10 +5,14 @@ export default class Header extends React.Component {
 
     render(){
         return (
-            <Paper zDepth={1} style={{"height" : "48px"}}>
-                HitSend.io
-                <img src={this.props.avatar_url} style={{"float" : "right"}}/> 
-            </Paper>
+            <div style={{//"position" : "absolute", 
+                         //"top" : "0", 
+                         //"left" : "0", 
+                         "height" : "54px", 
+                         "padding" : "6px"}}>
+                HitSend
+                <img src={this.props.avatar_url} style={{"float" : "right", "borderRadius" : "21px", "height" : "42px"}}/> 
+            </div>
         );
     }
 

@@ -2,6 +2,9 @@ import React from 'react';
 import ReactMixin from 'react-mixin';
 import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
+import { browserHistory } from 'react-router';
+
+//import store from '../router.jsx';
 
 export default class Setup extends React.Component {
 
@@ -9,6 +12,7 @@ export default class Setup extends React.Component {
         super();
 
         //bind instance methods to instance here
+        this.handleSave = this.handleSave.bind(this);
         this.initialState = this.initialState.bind(this);
         this.state = this.initialState();
     }
@@ -79,7 +83,13 @@ export default class Setup extends React.Component {
     }
 
     handleSave(){
-        
+       Meteor.call("updateUserAccountDetails", 
+       this.state.creditCard, 
+       this.state.username, 
+       (error, user) =>{
+            console.log("Got user ", user);
+            browserHistory.push('/' + user.profile.username); 
+       }); 
     }
 }
 

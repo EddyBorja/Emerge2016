@@ -39,6 +39,7 @@ var Routes = (
     <Route path="/" component={App}>
         <IndexRoute component={Index} />
         <Route path="/setup" component={Setup} />
+        <Route path="/profile" component={Profile} />
         <Route path="/:username" component={Profile} />
         <Route path="*" component={AppNotFound}/>
     </Route>
