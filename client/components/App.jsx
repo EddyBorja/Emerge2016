@@ -5,7 +5,7 @@ export default class App extends React.Component {
 
     getMeteorData(){
         return {
-            isLoggedIn: Meteor.userId !== null
+            isLoggedIn: Meteor.userId() !== null
         };
     }
 

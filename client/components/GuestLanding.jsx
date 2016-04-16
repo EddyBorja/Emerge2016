@@ -1,5 +1,6 @@
 import React from 'react';
 import RaisedButton from 'material-ui/lib/raised-button';
+import {Link} from 'react-router';
 
 export default class GuestLanding extends React.Component {
 
@@ -22,7 +23,8 @@ export default class GuestLanding extends React.Component {
         return (
             <div>
                 <h1>HitSend.io</h1>
-                <p>An easy way to find, hire and pay Freelancers anywhere.</p>
+                <p>Send so much cash to so many people.</p>
+                <p>Powered by Visa Direct.</p>
                 <RaisedButton
                     label="Log in with Facebook"
                     icon={<i className="fa fa-facebook-official" aria-hidden="true"></i>}
