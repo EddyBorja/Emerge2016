@@ -1,2 +1,1 @@
-# Emerge2016
-Emerge Americans 2016 Hackathon
+Emerge Americas 2016 Hackathon Project by Eddy Borja
